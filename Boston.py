@@ -9,4 +9,11 @@ df = pd.DataFrame()   # Create an empty dataframe df
 df["MedianHomePrice"] = boston_data.target
 df2 = pd.DataFrame(boston_data.data)
 df["CrimePerCapita"] = df2.iloc[:,0];
-df.head()
+print(df.head())
+
+df["intercept"]=1
+ln = sm.OLS(df["MedianHomePrice"], df[["intercept", "CrimePerCapita"]])
+results = ln.fit()
+print(results.summary())
+# print(df.plot.scatter(x="carats",y="sellingprice",c="DarkBlue"))
+# plt.show()

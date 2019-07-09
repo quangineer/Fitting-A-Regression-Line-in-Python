@@ -12,5 +12,6 @@ df["intercept"]=1
 ln = sm.OLS(df["sellingprice"], df[["intercept", "carats"]])
 results = ln.fit()
 print(results.summary())
-print(df.plot.scatter(x="carats",y="sellingprice",c="DarkBlue"))
+df.plot.scatter(x="carats",y="sellingprice",c="DarkBlue")
+plt.title("Price vs Carats")
 plt.show()

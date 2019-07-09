@@ -36,8 +36,8 @@ x = df["CrimePerCapita"]
 slope, intercept, r_value, p_value, std_err = stats.linregress(x,y)
 line = slope*xi+intercept
 
-plt.pyplot(x,y,'o', xi, line);
+plt.plot(x,y,'o', xi, line);
 plt.xlabel("Crime/Capita");
 plt.ylabel("Median Home Price");
-pyplab.title(" Price vs Crime");
+pylab.title(" Price vs Crime");
 plt.show()

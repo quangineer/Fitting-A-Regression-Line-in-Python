@@ -18,3 +18,26 @@ print(results.summary())
 df.plot.scatter(x="CrimePerCapita",y="MedianHomePrice",c="DarkBlue",)
 plt.title("Median Home Price vs CrimePerCapita");
 plt.show()
+
+
+# TO show the line that was fit:
+import plotly.plotly as py 
+import plotly.graph_objs as go 
+from matplotlib import pylab 
+from numpy import arange, array, ones 
+from scipy import stats 
+
+xi = arange(0,100)
+A = array([xi, ones(100)])
+
+y = df["MedianHomePrice"]
+x = df["CrimePerCapita"]
+
+slope, intercept, r_value, p_value, std_err = stats.linregress(x,y)
+line = slope*xi+intercept
+
+plt.pyplot(x,y,'o', xi, line);
+plt.xlabel("Crime/Capita");
+plt.ylabel("Median Home Price");
+pyplab.title(" Price vs Crime");
+plt.show()

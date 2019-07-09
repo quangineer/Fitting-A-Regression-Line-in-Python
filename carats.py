@@ -1,7 +1,7 @@
 import pandas as pd 
 import numpy as np 
 import statsmodels.api as sm 
-import matplotlib as plt 
+import matplotlib.pyplot as plt 
 
 df = pd.read_csv("carats.csv", header=None) # To create numerical header for each column
 # print (df)
@@ -12,4 +12,5 @@ df["intercept"]=1
 ln = sm.OLS(df["sellingprice"], df[["intercept", "carats"]])
 results = ln.fit()
 print(results.summary())
-ax = df.plot.scatter(x="carats",y="price",c="DarkBlue")
+print(df.plot.scatter(x="carats",y="sellingprice",c="DarkBlue"))
+plt.show()

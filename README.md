@@ -16,3 +16,4 @@ If there was no crimem we would expect the median home price to be 24016 dollars
 The p-value of 0 associated with crime per capita suggests that it is statistically significant in providing info in predicting the median home values.
 The correclation coefficient should be -0.386 due to negative relation displayed by scatter-plotting
 ![Screenshot](Figure_2.png)
+![Screenshot](11.png)

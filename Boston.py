@@ -17,7 +17,7 @@ results = ln.fit()
 print(results.summary())
 df.plot.scatter(x="CrimePerCapita",y="MedianHomePrice",c="DarkBlue",)
 plt.title("Median Home Price vs CrimePerCapita");
-plt.show()
+# plt.show()
 
 
 # TO show the line that was fit:

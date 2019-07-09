@@ -15,5 +15,5 @@ df["intercept"]=1
 ln = sm.OLS(df["MedianHomePrice"], df[["intercept", "CrimePerCapita"]])
 results = ln.fit()
 print(results.summary())
-# print(df.plot.scatter(x="carats",y="sellingprice",c="DarkBlue"))
-# plt.show()
+print(df.plot.scatter(x="CrimePerCapita",y="MedianHomePrice",c="DarkBlue"))
+plt.show()
